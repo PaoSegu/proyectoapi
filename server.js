@@ -4,6 +4,7 @@ const {connectDB} = require('./config/db');
 const bodyparser = require('body-parser');
 require('dotenv').config()
 const path = require('path')
+const authRoutes = require('./routes/auth');
 const app = express(); 
 
 connectDB();
@@ -17,7 +18,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
-app.use('/api/auth', require('./routes/auth'));
+app.use('/api/auth', authRoutes);
 
 const PORT = process.env.PORT || 5000;
 
