@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try{
         
-        const res = await fetch("http://localhost:5000/api/auth/register", {
+        const res = await fetch("https://proyectoapi-gt8u.onrender.com/api/auth/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -50,7 +50,7 @@ async function handleLogin(e){
 
     try{
         
-        const response = await fetch("htttp://localhost:5000/api/auth/login", {
+        const response = await fetch("https://proyectoapi-gt8u.onrender.com/api/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
