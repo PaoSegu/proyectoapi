@@ -5,7 +5,7 @@ require('dotenv').config()
     host: "localhost",
     dialect: "mysql" 
 })*/
-const sequelize = new sequelize(process.env.DATABASE_URL, {
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialect: "mysql",
     dialetOptions: {
         connectTimeout: 60000
